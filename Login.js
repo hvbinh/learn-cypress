@@ -5,6 +5,7 @@ describe('login test cases', () => {
         cy.get('#user_login').type('binhha')
         cy.get('#user_pass').type('12345678x@X')
         cy.get('#wp-submit').click()
+        cy.title().should('include','Profile ‹ Automation Blog — WordPress')
 
     })
     it('Verify that update profile successfully',()=>
@@ -15,6 +16,7 @@ describe('login test cases', () => {
         cy.get('#url').type('abc.com')
         cy.get('#description').type('my description')
         cy.get('#submit').click()
+        cy.title().should('eq','Log In ‹ Automation Blog — WordPress')
 
     })
 
